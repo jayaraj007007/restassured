@@ -1,4 +1,5 @@
 FROM maven:3.8.6-openjdk-18-slim
+USER tester
 ENV HOME=/app
 RUN mkdir -p $HOME
 WORKDIR $HOME
