@@ -6,4 +6,5 @@ WORKDIR $HOME
 COPY pom.xml pom.xml
 RUN mvn clean install
 COPY . .
+RUN chgrp -R 0 $HOME && chmod -R g=u $HOME
 CMD ["mvn", "test"]
